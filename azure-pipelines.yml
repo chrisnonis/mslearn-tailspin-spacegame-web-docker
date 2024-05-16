@@ -6,6 +6,10 @@ variables:
   webRepository: 'web'
   tag: '$(Build.BuildId)'
 
+pool:
+  name: Default
+  demands: SpecialSoftware # exists check for SpecialSoftware
+
 stages:
 - stage: 'Build'
   displayName: 'Build and push'
