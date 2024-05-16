@@ -17,7 +17,7 @@ stages:
   - job: 'Build'
     displayName: 'Build job'
     pool:
-      name: Azure Pipelines
+      name: default
     steps:
     - task: Docker@2
       displayName: 'Build and push the image to container registry'
@@ -83,7 +83,7 @@ stages:
   - job: 'Deploy'
     displayName: 'Deploy job'
     pool:
-      name: Azure Pipelines
+      name: default
     variables:
     - group: Release
     steps:
